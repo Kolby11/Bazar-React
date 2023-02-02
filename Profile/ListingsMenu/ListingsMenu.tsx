@@ -12,7 +12,7 @@ const ListingMenu = () => {
       </div>
       <div>
         {listings.map((item) => (
-          <div>
+          <div className="listing-display">
             <img alt="{item}"></img>
             <p>{item}</p>
           </div>
