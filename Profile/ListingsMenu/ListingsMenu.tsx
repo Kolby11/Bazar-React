@@ -13,6 +13,7 @@ const ListingMenu = () => {
       <div>
         {listings.map((item) => (
           <div>
+            <img alt="{item}"></img>
             <p>{item}</p>
           </div>
         ))}
