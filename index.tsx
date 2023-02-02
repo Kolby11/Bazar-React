@@ -3,8 +3,9 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import Profile from './Profile/Profile';
+import Main from './Main/Main';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
-root.render(<StrictMode></StrictMode>);
+root.render(<StrictMode><Main/></StrictMode>);
