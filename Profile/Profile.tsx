@@ -1,18 +1,21 @@
 import * as React from 'react';
+import Navbar from '../Profile/Navbar/Navbar';
 import './style.css';
 
-export default function Profile() {
+const Profile = () => {
   return (
     <div>
-      <div className="top-bar">
-        {/* Pridat presmerovanie na hlavnu stranku*/}
-        <a href="index.html">Bazos</a>
-        <a href="settings.html">Nastavenia</a>
-      </div>
+      <Navbar />
       <div className="profile-info">
-        <img src="" alt="Profile Image"></img>
+        <img src={'Images/profile_blank.png'} alt="Profile Image"></img>
         <p>Username</p>
+      </div>
+      <div className="listings-selection">
+        <button>Moje Inzeraty</button>
+        <button>Uložené inzeráty</button>
       </div>
     </div>
   );
-}
+};
+
+export default Profile;
