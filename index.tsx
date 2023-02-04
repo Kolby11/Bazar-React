@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home/Home';
@@ -12,10 +11,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}>
-          <Route path="profile" element={<Profile />} />
-          <Route path="settings" element={<Settings />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile/" element={<Profile />} />
+        <Route path="/profile/settings" element={<Settings />} />
       </Routes>
     </BrowserRouter>
   );

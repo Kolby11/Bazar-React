@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 const Navbar = () => {
@@ -6,8 +7,8 @@ const Navbar = () => {
     <div>
       <div className="nav-bar">
         {/* Pridat presmerovanie na hlavnu stranku*/}
-        <a href="index.html">Bazos</a>
-        <a href="settings.html">Nastavenia</a>
+        <Link to="/">Bazos</Link>
+        <Link to="/profile">Profile</Link>
       </div>
     </div>
   );
