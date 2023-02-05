@@ -1,10 +1,39 @@
 import * as React from 'react';
 import './style.css';
 
+export interface Inzerat {
+  id: number;
+  name: string;
+  category_id: number;
+  price: number;
+  locality: string;
+  description: string;
+  watch_count: number;
+}
 const maxListingsAmount: number = 2;
-const myListingsArray = ['Car', 'Tshirt', 'Banana', 'Monitor'];
-const savedListingsArray = ['Cat', 'Trousers', 'Apple'];
-function Listings({ listings }: { listings: string[] }) {
+const myListingsArray: Inzerat[] = [
+  {
+    id: 1,
+    name: 'Skoda Oktavia 2015',
+    category_id: 1,
+    price: 2500,
+    locality: 'Sarisske Olany',
+    description: 'Fajne avto, vsetko jazdi, trosku piska.',
+    watch_count: 24,
+  },
+];
+const savedListingsArray: Inzerat[] = [
+  {
+    id: 1,
+    name: 'Skoda Oktavia 2015',
+    category_id: 1,
+    price: 2500,
+    locality: 'Sarisske Olany',
+    description: 'Fajne avto, vsetko jazdi, trosku piska.',
+    watch_count: 24,
+  },
+];
+function Listings({ listings }: { listings: Inzerat[] }) {
   return (
     <div>
       {listings.map((item, i) => {
@@ -12,10 +41,9 @@ function Listings({ listings }: { listings: string[] }) {
           return (
             <div className="listing-display">
               <img alt="{item}" />
-              <p>
-                {item + ' '}
-                {i}
-              </p>
+              <div>
+                <b>{item.}</b>
+              </div>
             </div>
           );
         }
