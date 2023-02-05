@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { Outlet, Link } from 'react-router-dom';
-import Navbar from '../Settings/Navbar/Navbar';
 import './style.css';
 
-const Settings = () => {
+const Home = () => {
   return (
     <div>
       <p>HomePage</p>
@@ -11,4 +10,4 @@ const Settings = () => {
     </div>
   );
 };
-export default Settings;
+export default Home;
