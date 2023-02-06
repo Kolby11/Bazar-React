@@ -34,7 +34,7 @@ const myListingsArray: IListing[] = [
 const savedListingsArray: IListing[] = [
   {
     id: 1,
-    name: 'Skoda Oktavia 2015',
+    name: 'Skoda Oktavia 2020',
     category_id: 1,
     price: 2500,
     locality: 'Sarisske Olany',
@@ -45,11 +45,19 @@ const savedListingsArray: IListing[] = [
 function Listings({ listings }: { listings: IListing[] }) {
   return (
     <div>
+      <div className="row">
+        <b className="col">Obrazok</b>
+        <b className="col-6">Informácie</b>
+        <b className="col">Cena</b>
+        <p className="col">Lokalita</p>
+        <p className="col">Pozretia</p>
+        <hr />
+      </div>
       {listings.map((item, i) => {
         if (i < maxListingsAmount) {
           return (
             <div className="row">
-              <img alt="{item}" />
+              <img alt="Obrazok" className="col" />
               <div className="col-6">
                 <b>{item.name}</b>
                 <p>{item.description}</p>
@@ -69,18 +77,14 @@ function Listings({ listings }: { listings: IListing[] }) {
 const ListingMenu = () => {
   const [myListings, setMyListings] = React.useState(true);
   return (
-    <div className="container">
-      <div>
-        <button className="btn btn-primary" onClick={() => setMyListings(true)}>
-          Moje Inzeraty
-        </button>
-        <button
-          className="btn btn-primary"
-          onClick={() => setMyListings(false)}
-        >
-          Uložené inzeráty
-        </button>
-      </div>
+    <div className="m-5">
+      <button className="btn btn-primary" onClick={() => setMyListings(true)}>
+        Moje Inzeraty
+      </button>
+      <button className="btn btn-primary" onClick={() => setMyListings(false)}>
+        Uložené inzeráty
+      </button>
+      <div></div>
       {myListings ? (
         <Listings listings={myListingsArray} />
       ) : (
