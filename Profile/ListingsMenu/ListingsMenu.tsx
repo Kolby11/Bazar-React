@@ -10,39 +10,15 @@ export interface IListing {
   description: string;
   watch_count: number;
 }
-const maxListingsAmount: number = 2;
-const myListingsArray: IListing[] = [
-  {
-    id: 1,
-    name: 'Skoda Oktavia 2015',
-    category_id: 1,
-    price: 2500,
-    locality: 'Sarisske Olany',
-    description: 'Fajne avto, vsetko jazdi, trosku piska.',
-    watch_count: 24,
-  },
-  {
-    id: 2,
-    name: 'Mack a Velka',
-    category_id: 2,
-    price: 2.5,
-    locality: 'Vrakuna',
-    description: 'Hryže',
-    watch_count: 0,
-  },
-];
-const savedListingsArray: IListing[] = [
-  {
-    id: 1,
-    name: 'Skoda Oktavia 2020',
-    category_id: 1,
-    price: 2500,
-    locality: 'Sarisske Olany',
-    description: 'Fajne avto, vsetko jazdi, trosku piska.',
-    watch_count: 24,
-  },
-];
-function Listings({ listings }: { listings: IListing[] }) {
+interface ListingsProps {
+  listings: IListing[];
+  listingsAmount: number;
+}
+
+export const ListingsDisplay: React.FunctionComponent<ListingsProps> = (
+  props
+) => {
+  const { listings, listingsAmount } = props;
   return (
     <div>
       <div className="row">
@@ -54,7 +30,7 @@ function Listings({ listings }: { listings: IListing[] }) {
         <hr />
       </div>
       {listings.map((item, i) => {
-        if (i < maxListingsAmount) {
+        if (i < listingsAmount) {
           return (
             <div className="row">
               <img alt="Obrazok" className="col" />
@@ -73,7 +49,7 @@ function Listings({ listings }: { listings: IListing[] }) {
       })}
     </div>
   );
-}
+};
 const ListingMenu = () => {
   const [myListings, setMyListings] = React.useState(true);
   return (
@@ -84,12 +60,6 @@ const ListingMenu = () => {
       <button className="btn btn-primary" onClick={() => setMyListings(false)}>
         Uložené inzeráty
       </button>
-      <div></div>
-      {myListings ? (
-        <Listings listings={myListingsArray} />
-      ) : (
-        <Listings listings={savedListingsArray} />
-      )}
     </div>
   );
 };
