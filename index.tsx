@@ -5,7 +5,7 @@ import Home from './components/Home/Home';
 
 import Profile from './components/Profile/ProfilePage';
 import Settings from './components/Settings/Settings';
-import './style.css';
+import './assets/style.css';
 
 export default function App() {
   return (

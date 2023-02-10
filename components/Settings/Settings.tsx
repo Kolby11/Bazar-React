@@ -1,12 +1,13 @@
 import * as React from 'react';
-import Navbar from '../Settings/Navbar/Navbar';
-import './style.css';
+import ProfileSettingsInfo from '../Settings/components/ProfileInfo';
+import Navbar from '../shared/Navbar';
 
 const Settings = () => {
   return (
     <div>
-      <h1>Settings</h1>
       <Navbar />
+      <h1 className="text-center">Settings</h1>
+      <ProfileSettingsInfo />
     </div>
   );
 };
