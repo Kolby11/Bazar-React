@@ -1,15 +1,6 @@
 import * as React from 'react';
-import './style.css';
+import { IListing } from '../../data/interfaces';
 
-export interface IListing {
-  id: number;
-  name: string;
-  category_id: number;
-  price: number;
-  locality: string;
-  description: string;
-  watch_count: number;
-}
 interface ListingsProps {
   listings: IListing[];
   listingsAmount: number;
@@ -50,18 +41,3 @@ export const ListingsDisplay: React.FunctionComponent<ListingsProps> = (
     </div>
   );
 };
-const ListingMenu = () => {
-  const [myListings, setMyListings] = React.useState(true);
-  return (
-    <div className="m-5">
-      <button className="btn btn-primary" onClick={() => setMyListings(true)}>
-        Moje Inzeraty
-      </button>
-      <button className="btn btn-primary" onClick={() => setMyListings(false)}>
-        Uložené inzeráty
-      </button>
-    </div>
-  );
-};
-
-export default ListingMenu;

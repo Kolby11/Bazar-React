@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Home/Home';
+import Home from './components/Home/Home';
 
-import Profile from './Profile/ProfilePage';
-import Settings from './Settings/Settings';
+import Profile from './components/Profile/ProfilePage';
+import Settings from './components/Settings/Settings';
 import './style.css';
 
 export default function App() {
