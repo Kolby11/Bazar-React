@@ -12,21 +12,17 @@ export const ListingsDisplay: React.FunctionComponent<ListingsProps> = (
 ) => {
   const { listings, listingsAmount, isOwner } = props;
   return (
-    <div>
-      <div className="row">
-        <b className="col">Obrazok</b>
-        <b className="col-5">Informácie</b>
-        <b className="col">Cena</b>
-        <p className="col">Lokalita</p>
-        <p className="col">Pozretia</p>
+    <div className="m-5">
+      <div className="row mb-4 border-bottom border-3 border-primary">
+        <h6 className="col">Obrázok</h6>
+        <h6 className="col-5">Informácie</h6>
+        <h6 className="col">Cena</h6>
+        <h6 className="col">Lokalita</h6>
+        {isOwner === true ? <h6 className="col">Pozretia</h6> : null}
         {isOwner === true ? (
           //fix css
-          <div className="col grid gap-0 column-gap-3">
-            <p className="row">Edit</p>
-            <p className="row">Delete</p>
-          </div>
+          <div className="col grid gap-0 column-gap-3"></div>
         ) : null}
-        <hr />
       </div>
       {listings.map((item, i) => {
         if (i < listingsAmount) {
@@ -39,7 +35,10 @@ export const ListingsDisplay: React.FunctionComponent<ListingsProps> = (
               </div>
               <b className="col">{item.price}</b>
               <p className="col">{item.locality}</p>
-              <p className="col">{item.watch_count}</p>
+              {isOwner === true ? (
+                <p className="col">{item.watch_count}</p>
+              ) : null}
+
               {isOwner === true ? (
                 <div className="col grid gap-0 column-gap-3">
                   <button className="col btn btn-secondary p-2 g-col-6">
