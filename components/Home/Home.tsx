@@ -26,7 +26,7 @@ const Home = () => {
         <i className="fa fa-folder"></i>
       </button>
       <div className="topnav">
-        <Filter></Filter>
+        <Filter />
       </div>
       <ListingsDisplay listings={[]} listingsAmount={0} isOwner={false} />
     </div>
