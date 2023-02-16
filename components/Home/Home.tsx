@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { Outlet, Link } from 'react-router-dom';
+import AddListing from '../Add Listing/AddListing';
+import AddListingButton from '../shared/AddListingButton';
 import Filter from '../shared/Filter';
 import { ListingsDisplay } from '../shared/ListingDisplay';
 import Navbar from '../shared/Navbar';
@@ -29,6 +31,7 @@ const Home = () => {
         <Filter></Filter>
       </div>
       <ListingsDisplay listings={[]} listingsAmount={0} isOwner={false} />
+      <AddListingButton />
     </div>
   );
 };
