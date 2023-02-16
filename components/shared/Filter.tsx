@@ -16,6 +16,12 @@ const Filter = () => {
   return (
     <div>
       <p>Filter</p>
+      <input type="text" placeholder="Search.."></input>
+      <select name="cars" id="cars">
+        {kategorie.map((item) => {
+          return <option>{item}</option>;
+        })}
+      </select>
     </div>
   );
 };
