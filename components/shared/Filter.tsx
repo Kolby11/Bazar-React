@@ -22,6 +22,12 @@ const Filter = () => {
           return <option>{item}</option>;
         })}
       </select>
+        <input type="range" min="0" max="500000">  
+        </input>
+
+        <div id="SelectValue"></div>
+
+      
     </div>
   );
 };
