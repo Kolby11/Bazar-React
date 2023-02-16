@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Outlet, Link } from 'react-router-dom';
+import Filter from '../shared/Filter';
 import { ListingsDisplay } from '../shared/ListingDisplay';
 import Navbar from '../shared/Navbar';
 
@@ -32,6 +33,7 @@ const Home = () => {
           <option value="audi">Audi</option>
         </select>
         <input type="text" placeholder="Search.."></input>
+        <Filter></Filter>
       </div>
       <ListingsDisplay listings={[]} listingsAmount={0} isOwner={false} />
     </div>
