@@ -13,6 +13,7 @@ let kategorie: string[] = [
 ];
 
 const Filter = () => {
+  const [sliderValue, setSlider] = React.useState<number>(0);
   return (
     <div>
       <p>Filter</p>
@@ -22,12 +23,15 @@ const Filter = () => {
           return <option>{item}</option>;
         })}
       </select>
-        <input type="range" min="0" max="500000">  
-        </input>
-
-        <div id="SelectValue"></div>
-
-      
+      <div className="slider">
+        <input
+          type="range"
+          min="0"
+          max="500000"
+          onChange={(e) => setSlider(Number(e.target.value))}
+        ></input>
+        <p id="rangeValue">{sliderValue}</p>
+      </div>
     </div>
   );
 };

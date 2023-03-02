@@ -9,7 +9,6 @@ const Home = () => {
     <div>
       <Navbar />
       <h1>Bazoš</h1>
-      <p>Icon buttons:</p>
       <button className="btn">
         <i className="fa fa-home"></i>
       </button>
