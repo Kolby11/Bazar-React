@@ -5,19 +5,23 @@ const ProfileSettingsInfo = () => {
     <div className="d-flex justify-content-center">
       <div>
         <div className="flex-row align-content-center">
-          <img src={'Images/profile_blank.png'} alt="Profile Image"></img>
+          <img src={'Images/profile_blank.png'} alt="Profilová fotka"></img>
           <br />
-          <button>Zmeniť profilovú fotku</button>
+          <br />
+          <button className="btn btn-primary">Zmeniť profilovú fotku</button>
         </div>
+        <br />
         <form className="flex-column">
-          <label>Change Username</label>
+          <label className="form-label">Zmeniť meno</label>
           <br />
-          <input value="username" />
+          <input className="input-group-text" value="meno" />
           <br />
-          <label>Change Password</label>
+          <label className="form-label">Zmeniť heslo</label>
           <br />
-          <input value="password" />
+          <input className="input-group-text" value="heslo" />
           <br />
+          <br />
+          <button type="button" className="btn btn-primary">Uložiť zmeny</button>
         </form>
       </div>
     </div>
