@@ -20,6 +20,18 @@ const ProfileSettingsInfo = () => {
           <br />
           <input className="input-group-text" value="heslo" />
           <br />
+          <label className="form-label">Zmeniť mesto</label>
+          <br />
+          <input className="input-group-text" value="mesto" />
+          <br />
+          <label className="form-label">Zmeniť tel. číslo</label>
+          <br />
+          <input className="input-group-text" value="0912 123 123" />
+          <br />
+          <label className="form-label">Zmeniť emailovú adresu</label>
+          <br />
+          <input className="input-group-text" value="***********@gmail.com" />
+          <br />
           <br />
           <button type="button" className="btn btn-primary">Uložiť zmeny</button>
         </form>
