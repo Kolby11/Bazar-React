@@ -14,27 +14,28 @@ const ProfileSettingsInfo = () => {
         <form className="flex-column">
           <label className="form-label">Zmeniť meno</label>
           <br />
-          <input className="input-group-text" value="meno" />
+          <input className="input-group-text" placeholder="meno" />
           <br />
           <label className="form-label">Zmeniť heslo</label>
           <br />
-          <input className="input-group-text" value="heslo" />
+          <input className="input-group-text" placeholder="heslo" />
           <br />
           <label className="form-label">Zmeniť mesto</label>
           <br />
-          <input className="input-group-text" value="mesto" />
+          <input className="input-group-text" placeholder="mesto" />
           <br />
           <label className="form-label">Zmeniť tel. číslo</label>
           <br />
-          <input className="input-group-text" value="0912 123 123" />
+          <input className="input-group-text" placeholder="0912 123 123" />
           <br />
           <label className="form-label">Zmeniť emailovú adresu</label>
           <br />
-          <input className="input-group-text" value="***********@gmail.com" />
+          <input className="input-group-text" placeholder="***********@gmail.com" />
           <br />
           <br />
           <button type="button" className="btn btn-primary">Uložiť zmeny</button>
         </form>
+        
       </div>
     </div>
   );

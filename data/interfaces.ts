@@ -7,3 +7,10 @@ export interface IListing {
   description: string;
   watch_count: number;
 }
+export type UserInfo={
+  id: number;
+  user_name: string;
+  password: string;
+  phone_number: number;
+  email_adress: string;
+}
