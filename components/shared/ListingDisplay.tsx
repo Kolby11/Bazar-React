@@ -12,7 +12,7 @@ export const ListingsDisplay: React.FunctionComponent<ListingsProps> = (
 ) => {
   const { listings, listingsAmount, isOwner } = props;
   return (
-    <div className="m-5">
+    <div className="m-5  p-4 m-2 ">
       <div className="row mb-4 border-bottom border-3 border-primary">
         <h6 className="col">Obrázok</h6>
         <h6 className="col-5">Informácie</h6>

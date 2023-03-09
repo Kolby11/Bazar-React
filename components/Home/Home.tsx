@@ -8,7 +8,6 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <h1>Bazoš</h1>
       <button className="btn">
         <i className="fa fa-home"></i>
       </button>
